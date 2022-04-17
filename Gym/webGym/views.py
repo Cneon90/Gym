@@ -11,6 +11,7 @@ from django.views.generic.base import TemplateView
 def home(request):
     data = {}
     data = loadMenu(request)
+
     return render(request, 'webGym/index.html', data)
 
 
