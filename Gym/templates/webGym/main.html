@@ -1,6 +1,5 @@
 {% load static %}
 <!DOCTYPE html>
-<!-- saved from url=(0041)https://staging.webdesigntexas.us/gymlab/ -->
 <html class="no-js" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="stndz-style"></style>
     
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -30,7 +29,6 @@
 
 <style></style></head>
 <body>
-
     <!-- preloader -->
     <div class="preloader" style="display: none;">
         <div class="d-table">
@@ -49,9 +47,6 @@
     <div class="mouse-cursor cursor-inner" style="visibility: visible; transform: translate(236px, 802px);"></div>
     <!-- ==================== End cursor ==================== -->
     <!-- Scroll-top -->
-    <button class="scroll-top scroll-to-target" data-target="html">
-        <i class="fa fa-angle-up"></i>
-    </button>
     <!-- Scroll-top-end -->
     <!-- header-start -->
     <header class="header-two">
@@ -61,22 +56,21 @@
                     <div class="col-md-12">
                         <nav class="menu-nav">
                             <div class="logo">
-                                <a href="{% url 'home' %}"><img src="{% static '/img/header-logo.png'%}" alt=""></a>
+                                <a href="#"><img src="{% static '/img/header-logo.png'%}" alt=""></a>
                             </div>
                             <div class="call-email">
                                 <ul>
-                                 {% for m_icon in icon %}
                                     <li>
                                         <span class="icon-call">
-                                            <img src="{% get_static_prefix %}img/{{ m_icon.image_src }}" alt="">
+                                            <img src="{% static '/img/call-r.png'%}" alt="">
                                         </span>
                                         <div class="cont-con">
-                                            <span>{{m_icon.titile}}</span><br>
-                                            <a href="{{m_icon.url}}">{{m_icon.text}} </a>
+                                            <span>test</span><br>
+                                            <a href="#"> ссылка </a>
                                         </div>
                                     </li>
-                                {% endfor %}
-                               <!--     <li>
+
+                                    <li>
                                         <span class="icon-call">
                                             <img src="{% static '/img/vk.png'%}" alt="">
                                         </span>
@@ -84,13 +78,19 @@
                                             <span>Группа ВКонтакте</span><br>
                                             <a href="https://vk.com/spartak_krg">Spartak_krg</a>
                                         </div>
+                                        <span class="icon-call">
+                                            <img src="{% static '/img/call-r.png'%}" alt="">
+                                        </span>
+                                        <div class="cont-con">
+                                            <span>Инстраграм</span><br>
+                                            <a href="#g">Инстраграм</a>
+                                        </div>
                                     </li>
                                     <li class="header-btn">
-                                        <a href="{% url 'Profile' %}" class="animation-cer btn-call">
+                                        <a href="" class="animation-cer btn-call">
                                             <img src="{% static '/img/user.png'%}" alt="">
                                         </a>
-
-                                    </li> -->
+                                    </li>
                                 </ul>
                             </div>
                             <div class="d-md-block-two">
@@ -101,14 +101,9 @@
                                 <div class="navbar-wrap main-menu d-none d-lg-flex float-l-two">
                                     <ul class="navigation">
 
-
-
-
-                                      {% for m_item in Menu %}
                                              <li class="{% if active_tab == m_item.Alias  %} active  {% else %}  {% endif %}"><a href="{{ m_item.Alias }}">{{ m_item.Name }}</a></li>
-                                        {% endfor %}
-
-                                  <!--      <li class="{% block ProfileActivate %} {% endblock %}"><a href="{% url 'Profile' %}">Profile</a></li>
+                                             <li class=""><a href="#">test</a></li>
+                                        <li class="">Profile</a></li>
                                         <li><a href="https://staging.webdesigntexas.us/gymlab/services.html">Services</a></li>
                                         <li><a href="https://staging.webdesigntexas.us/gymlab/class.html">Class</a></li>
                                         <li><a href="https://staging.webdesigntexas.us/gymlab/blog.html">Blog</a></li>
@@ -124,7 +119,7 @@
                                             </ul> 
                                         <div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
                                         <li><a href="https://staging.webdesigntexas.us/gymlab/contact.html">contacts</a></li>
-                                   -->
+
                                     </ul>
                                 </div>
                                 <span class="close-two">
@@ -140,7 +135,7 @@
                                         <a href="https://staging.webdesigntexas.us/gymlab/index.html"><img src="{% static '/img/header-logo.png'%}" alt="" title=""></a>
                                     </div>
                                     <div class="menu-outer">
-                                     <!--          <li class="{% block ProfileActivate1 %} {% endblock %}"><a href="{% url 'Profile' %}">Profile</a></li>
+                                            <li class="{% block ProfileActivate1 %} {% endblock %}"><a href="">Profile</a></li>
                                         <li><a href="https://staging.webdesigntexas.us/gymlab/services.html">Services</a></li>
                                         <li><a href="https://staging.webdesigntexas.us/gymlab/class.html">Clas2s</a></li>
                                         <li><a href="https://staging.webdesigntexas.us/gymlab/blog.html">Blog</a></li>
@@ -152,10 +147,10 @@
                                                 <li><a href="https://staging.webdesigntexas.us/gymlab/blog-details.html">Blogs Details</a></li>
                                                 <li><a href="https://staging.webdesigntexas.us/gymlab/class-details.html">Class Details</a></li>
                                                 <li><a href="https://staging.webdesigntexas.us/gymlab/faq.html">Faq's</a></li>
-                                                
-                                            </ul> 
+
+                                            </ul>
                                         <div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
-                                        <li><a href="https://staging.webdesigntexas.us/gymlab/contact.html">contacts</a></li> -->
+                                        <li><a href="https://staging.webdesigntexas.us/gymlab/contact.html">contacts</a></li>
                                     </ul>
                                 </div>
                                     <div class="social-links">
@@ -185,21 +180,20 @@
         <div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-pointer-events">
             <div class="swiper-wrapper" id="swiper-wrapper-d8ba827d14774410a" aria-live="polite">
 
-            {% for b_item in banner %}
-                <div class="swiper-slide cover-background swiper-slide-visible swiper-slide-active" style="background-image: url( {% get_static_prefix %}img/{{ b_item.image_src }}); width: 1903px;" role="group" aria-label="1 / {{banner.count}}">
+
+                <div class="swiper-slide cover-background swiper-slide-visible swiper-slide-active">
                     <div class="po-text-gym wow fadeInUp animated" data-wow-delay="0.8s" style="visibility: visible;-webkit-animation-delay: 0.8s; -moz-animation-delay: 0.8s; animation-delay: 0.8s;">
-                        <h1>{{b_item.Titile}}</h1>
-                        <h4>{{b_item.text}}</h4>
+                        <h1>Заголовок</h1>
+                        <h4>Под</h4>
                         <ul>
-                            {% for button_item in banner_button %}
-                                  {% if  button_item.Slide.id == b_item.id  %}  <!-- Вывод нужных кнопок на определенном слайде -->
-                                        <li><a href="{{button_item.url}}" class="line-bg">{{button_item.text}}   </a></li>
-                                  {% endif %}
-                            {% endfor %}
+                               <!-- Вывод нужных кнопок на определенном слайде -->
+                                        <li><a href="#" class="line-bg"> button </a></li>
+
+
                       </ul>
                     </div>
                 </div>
-            {% endfor %}
+
           </div>
 
     <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-d8ba827d14774410a" aria-disabled="false"></div>

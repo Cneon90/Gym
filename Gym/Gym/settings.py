@@ -77,16 +77,16 @@ WSGI_APPLICATION = 'Gym.wsgi.application'
 
 DATABASES = {
  'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'Spartak.gym',
-    'USER' : 'postgres',
-    'PASSWORD' : 'LiriK1990',
-    'HOST' : '127.0.0.1',
-    'PORT' : '5432',
- }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+    # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    # 'NAME': 'Spartak.gym',
+    # 'USER' : 'postgres',
+    # 'PASSWORD' : 'LiriK1990',
+    # 'HOST' : '127.0.0.1',
+    # 'PORT' : '5432',
+ # }
 
 }
 
