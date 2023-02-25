@@ -4,7 +4,7 @@ from . import views
 from django.urls import path, include
 from django.contrib import admin
 from django.urls import path
-from .views import AboutView
+from .views import *
 
 
 urlpatterns = [
@@ -12,6 +12,6 @@ urlpatterns = [
     path('', RedirectView.as_view(url='/home', permanent=False), name='home'),  # При загрузке сразу переходим на home
     path('home', views.home, name='home'),  # Главная страница
     path('test', AboutView.as_view()),
-    path('Profile', views.Profile, name='Profile'),
+    path('registration', registration.as_view(), name='registration'),
 
 ]

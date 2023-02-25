@@ -136,7 +136,6 @@
 
 .footer-four .subs:before {
     content: "";
-    background-image: url(../images/ret.png);
     width: 100px;
     height: 90px;
     position: absolute;
