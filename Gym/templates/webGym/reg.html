@@ -2,121 +2,59 @@
 {% load static %}
 
 {% block content %}
-    <div class="columns ">
-        <div class="column auto">
-            <div class="dropdown is-active">
-  <div class="dropdown-trigger">
-    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-      <span>Dropdown button</span>
-      <span class="icon is-small">
-        <i class="fas fa-angle-down" aria-hidden="true"></i>
-      </span>
-    </button>
-  </div>
-  <div class="dropdown-menu" id="dropdown-menu" role="menu">
-    <div class="dropdown-content">
-      <a href="#" class="dropdown-item">
-        Dropdown item
-      </a>
-      <a class="dropdown-item">
-        Other dropdown item
-      </a>
-      <a href="#" class="dropdown-item is-active">
-        Active dropdown item
-      </a>
-      <a href="#" class="dropdown-item">
-        Other dropdown item
-      </a>
-      <hr class="dropdown-divider">
-      <a href="#" class="dropdown-item">
-        With a divider
-      </a>
+<h1 class="title text-center">Регистрация</h1>
+ <div class="columns ">
+   <div class="column is-three-quarters is-three-fifths is-offset-one-fifth">
+    <div class="registration">
+      <form action="/registration" >
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Text input">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Username</label>
+          <div class="control has-icons-left has-icons-right">
+            <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+              <span class="icon is-small is-left">
+               <i class="fas fa-user"></i>
+              </span>
+             <span class="icon is-small is-right">
+               <i class="fas fa-check"></i>
+             </span>
+          </div>
+          <p class="help is-success">This username is available</p>
+        </div>
+
+         <div class="field">
+           <label class="label">Email</label>
+             <div class="control has-icons-left has-icons-right">
+               <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+               <span class="icon is-small is-left">
+                 <i class="fas fa-envelope"></i>
+               </span>
+               <span class="icon is-small is-right">
+                 <i class="fas fa-exclamation-triangle"></i>
+               </span>
+            </div>
+           <p class="help is-danger">This email is invalid</p>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link">Регистрация</button>
+          </div>
+          <div class="control">
+            <button class="button is-link is-light" type="reset">Очистить</button>
+          </div>
+          <div class="control">
+            <button class="button is-link is-light">Отмена</button>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 </div>
 
-        </div>
-
-    <div class="column is-three-quarters">
-    <div class="registration">
-   <form action="/registration" >
-        <div class="field">
-            <label class="label">Name</label>
-        <div class="control">
-            <input class="input" type="text" placeholder="Text input">
-        </div>
-        </div>
-
-<div class="field">
-  <label class="label">Username</label>
-  <div class="control has-icons-left has-icons-right">
-    <input class="input is-success" type="text" placeholder="Text input" value="bulma">
-    <span class="icon is-small is-left">
-      <i class="fas fa-user"></i>
-    </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-check"></i>
-    </span>
-  </div>
-  <p class="help is-success">This username is available</p>
-</div>
-
-<div class="field">
-  <label class="label">Email</label>
-  <div class="control has-icons-left has-icons-right">
-    <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
-    <span class="icon is-small is-left">
-      <i class="fas fa-envelope"></i>
-    </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-exclamation-triangle"></i>
-    </span>
-  </div>
-  <p class="help is-danger">This email is invalid</p>
-</div>
-
-<div class="field is-grouped">
-  <div class="control">
-    <button class="button is-link">Регистрация</button>
-  </div>
-  <div class="control">
-    <button class="button is-link is-light" type="reset">Очистить</button>
-  </div>
-    <div class="control">
-    <button class="button is-link is-light">Отмена</button>
-  </div>
-
-</div>
-                        </form>
-                </div>
-        </div>
-   </div>
-
 {% endblock %}
- <section class="pt-90 pb-90 about-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-
-
-                    <h3> Регистрация g</h3>
-
-                </div>
-                <div class="registration">
-                    <div class="col-md-8">
-                        <form action="/registration" method="post">
-                          <input class="input is-primary" type="text" placeholder="Primary input">
-                            <input name="Name" type="text" maxlength="20" minlength="3" class="fill form-control">
-                            <input name="Password" type="password" minlength="3" maxlength="20" class="fill form-control">
-                            <br>
-                            <button type="submit" class="btn upcase "> Регистрация </button>
-                            <br>
-                            <br>
-                            <button type="reset" class="btn upcase "> Очистить </button>
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
