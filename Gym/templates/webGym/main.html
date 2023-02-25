@@ -1,7 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html class="no-js" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="stndz-style"></style>
-    
+
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Gym</title>
     <meta name="description" content="">
@@ -69,8 +69,8 @@
                                             <img src="{% static '/img/call-r.png'%}" alt="">
                                         </span>
                                         <div class="cont-con">
-                                            <span>test</span><br>
-                                            <a href="#"> ссылка </a>
+                                            <span>Вход</span><br>
+                                            <a href="{% url 'auth' %}"> ссылка </a>
                                         </div>
                                     </li>
 
@@ -93,11 +93,24 @@
                                             <a href="#g">Инстраграм</a>
                                         </div>
                                     </li>
+                                    {% if request.user.is_authenticated %}
                                     <li class="header-btn">
-                                        <a href="" class="animation-cer btn-call">
+                                        <i class=" icon-user-circle" style="font-size: 34px; color: red"></i>
+                                        <div class="user-name">
+                                             <a href="">
+                                                 {{user.username}}
+                                             </a>
+                                        </div>
+                                    </li>
+
+                                    {% else %}
+                                    <li>
+                                        <a href="{% url 'auth' %}" class="animation-cer btn-call">
                                             <img src="{% static '/img/user.png'%}" alt="">
                                         </a>
                                     </li>
+
+                                    {% endif %}
                                 </ul>
                             </div>
                             <div class="d-md-block-two">
@@ -108,7 +121,13 @@
                                 <div class="navbar-wrap main-menu d-none d-lg-flex float-l-two">
                                     <ul class="navigation">
                                         <li class="{% if active_tab == m_item.Alias  %} active  {% else %}  {% endif %}"><a href="{{ m_item.Alias }}">{{ m_item.Name }}</a></li>
-                                        <li class=""><a href="#">test</a></li>
+                                        {% if request.user.is_authenticated %}
+                                         <li class=""><a href="{% url 'logout' %}">Выйти</a></li>
+                                         <li class=""><a href="{% url 'logout' %}">Личный кабинет</a></li>
+                                        {% else %}
+                                       <li class=""><a href="{% url 'auth' %}">Вход</a></li>
+                                        {% endif %}
+
                                     </ul>
                                 </div>
                                 <span class="close-two">
@@ -130,7 +149,7 @@
 <!--                                        <li><a href="https://staging.webdesigntexas.us/gymlab/blog.html">Blog</a></li>-->
 <!--                                        <li><a href="https://staging.webdesigntexas.us/gymlab/trainer.html">Trainer</a></li>-->
 <!--                                        <li class="menu-item-has-children">-->
-                                            <a href="javascript:void(0)">Pages</a>
+<!--                                            <a href="javascript:void(0)">Pages</a>-->
 <!--                                            <ul class="submenu">-->
 <!--                                                <li><a href="https://staging.webdesigntexas.us/gymlab/services-details.html">Services Details</a></li>-->
 <!--                                                <li><a href="https://staging.webdesigntexas.us/gymlab/blog-details.html">Blogs Details</a></li>-->
@@ -143,7 +162,7 @@
 <!--                                    </ul>-->
                                 </div>
                                     <div class="social-links">
-                                        <ul class="clearfix">
+<!--                                        <ul class="clearfix">-->
 <!--                                            <li><a href="https://staging.webdesigntexas.us/gymlab/#"><span class="fa fa-twitter"></span></a></li>-->
 <!--                                            <li><a href="https://staging.webdesigntexas.us/gymlab/#"><span class="fa fa-facebook-square"></span></a></li>-->
 <!--                                            <li><a href="https://staging.webdesigntexas.us/gymlab/#"><span class="fa fa-pinterest-p"></span></a></li>-->
@@ -237,7 +256,7 @@
                                 <li><a href="https://staging.webdesigntexas.us/gymlab/#">Class</a></li>
                                 <li><a href="https://staging.webdesigntexas.us/gymlab/#">Blog</a></li>
                                 <li><a href="https://staging.webdesigntexas.us/gymlab/#">Trainer</a></li>
-                                <li><a href="https://staging.webdesigntexas.us/gymlab/#">Faq's</a></li>                               
+                                <li><a href="https://staging.webdesigntexas.us/gymlab/#">Faq's</a></li>
                                 <li><a href="https://staging.webdesigntexas.us/gymlab/#">About</a></li>
                                 <li><a href="https://staging.webdesigntexas.us/gymlab/#">Meet Our Team</a></li>
                                 <li><a href="https://staging.webdesigntexas.us/gymlab/#">Our Portfolio</a></li>
@@ -281,8 +300,8 @@
         <!-- Footer -End -->
     </div>
 
-    
-    
+
+
     <!-- JS here -->
 
     <script src="{% static '/js/jquery-3.6.0.min.js'%}"></script>
@@ -291,7 +310,7 @@
     <script src="{% static '/js/isotope.pkgd.min.js'%}"></script>
     <script src="{% static '/js/jquery.magnific-popup.min.js'%}"></script>
     <script src="{% static '/js/owl.carousel.min.js'%}"></script>
-     
+
     <script src="{% static '/js/swiper.min.js'%}"></script>
     <script src="{% static '/js/all.js'%}"></script>
     <script src="{% static '/js/main.js'%}"></script>

@@ -12,7 +12,8 @@ urlpatterns = [
     path('', RedirectView.as_view(url='/home', permanent=False), name='home'),  # При загрузке сразу переходим на home
     path('home', views.home, name='home'),  # Главная страница
     path('test', AboutView.as_view()),
-    path('registration', registration.as_view(), name='registration'),
-    path('auth', auth.as_view(), name='auth'),
+    path('registration', RegisterUser.as_view(), name='registration'),
+    path('auth', LoginUser.as_view(), name='auth'),
+    path('logout/', logout_user, name='logout'),
 
 ]
