@@ -9,8 +9,9 @@ from .views import *
 
 urlpatterns = [
 
-    path('', RedirectView.as_view(url='/home', permanent=False), name='home'),  # При загрузке сразу переходим на home
-    path('home', views.home, name='home'),  # Главная страница
+    path('', RedirectView.as_view(url='/home', permanent=False), name='home'),
+    path('home', views.home, name='home'),
+    path('my', MyCabinet.as_view(), name='my'),
     path('test', AboutView.as_view()),
     path('registration', RegisterUser.as_view(), name='registration'),
     path('auth', LoginUser.as_view(), name='auth'),

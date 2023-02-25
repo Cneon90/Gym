@@ -16,6 +16,7 @@ from django.views.generic.base import TemplateView
 from django.views.generic import TemplateView, ListView, CreateView
 
 
+
 # Create your views here.
 
 
@@ -91,6 +92,17 @@ class LoginUser(LoginView):
 
     def get_success_url(self):
         return reverse_lazy('home')
+
+
+class MyCabinet(ListView):
+    template_name = 'webGym/my.html'
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['menu'] = "kirill"
+        return context
+    def get_queryset(self):
+        return 1
+
 
 
 def logout_user(request):
