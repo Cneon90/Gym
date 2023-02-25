@@ -20,13 +20,14 @@
     <link rel="stylesheet" href="{% static '/css/style.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static '/css/reg.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static '/css/all.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '/css/fontello.css' %}" type="text/css">
 
     <link rel="stylesheet" href="{% static '/css/responsive.css' %}" type="text/css">
-<!--    <link rel="preload" href="{% static '/fonts/1.woff' %}" as="font">-->
-<!--    <link rel="preload" href="{% static '/fonts/92zatBhPNqw73oTd4g.woff2' %}" as="font">-->
-<!--    <link rel="preload" href="{% static '/fonts/o-0IIpQlx3QUlC5A4PNr4TRAW_0.woff2' %}" as="font">-->
-<!--    <link rel="preload" href="{% static '/fonts/o-0NIpQlx3QUlC5A4PNjXhFVYNyB1Wk.woff2' %}" as="font">-->
-<!--    <link rel="preload" href="{% static '/fonts/fontawesome-webfont.woff2' %}" as="font">-->
+    <link rel="preload" href="{% static '/fonts/1.woff' %}" as="font">
+    <link rel="preload" href="{% static '/fonts/92zatBhPNqw73oTd4g.woff2' %}" as="font">
+    <link rel="preload" href="{% static '/fonts/o-0IIpQlx3QUlC5A4PNr4TRAW_0.woff2' %}" as="font">
+    <link rel="preload" href="{% static '/fonts/o-0NIpQlx3QUlC5A4PNjXhFVYNyB1Wk.woff2' %}" as="font">
+    <link rel="preload" href="{% static '/fonts/fontawesome-webfont.woff2' %}" as="font">
      <link rel="stylesheet" href="{% static '/css/bulma.css' %}" type="text/css">
 
 
@@ -75,17 +76,20 @@
 
                                     <li>
                                         <span class="icon-call">
-                                            <img src="{% static '/img/vk.png'%}" alt="">
+<!--                                            <img src="{% static '/img/vk.png'%}" alt="">-->
+                                            <i class="demo-icon icon-vk" style="color: red;font-size: 34px"></i>
+<!--                                            <i class="icon-vkontakte-2"></i>-->
                                         </span>
                                         <div class="cont-con">
-                                            <span>Группа ВКонтакте</span><br>
+                                            <span>ВК</span><br>
                                             <a href="https://vk.com/spartak_krg">Spartak_krg</a>
                                         </div>
-                                        <span class="icon-call">
-                                            <img src="{% static '/img/call-r.png'%}" alt="">
-                                        </span>
+
+<!--                                        <img src="{% static '/img/call-r.png'%}" alt="">-->
+                                            <i class="demo-icon icon-instagram" style="color: red;font-size: 34px"></i>
+
                                         <div class="cont-con">
-                                            <span>Инстраграм</span><br>
+                                            <span>Instagram</span><br>
                                             <a href="#g">Инстраграм</a>
                                         </div>
                                     </li>
@@ -187,6 +191,7 @@
 
         <!-- Slider-End -->
 
+    <h1 class="title text-center">{% block title %} {% endblock %}</h1>
     {% block content %}
 
     {% endblock %}
