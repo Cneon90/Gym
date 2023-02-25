@@ -132,7 +132,7 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATIC_URL = 'dist/static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = 'Gym/static/'
 
 STATICFILES_DIRS = [
