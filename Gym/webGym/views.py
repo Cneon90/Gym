@@ -1,3 +1,7 @@
+import os
+import random
+from pathlib import Path
+
 from django.contrib.auth import logout, login
 from django.contrib.auth.views import LoginView
 from django.shortcuts import render, redirect
@@ -14,16 +18,17 @@ from .forms import *
 from .function import *
 from django.views.generic.base import TemplateView
 from django.views.generic import TemplateView, ListView, CreateView
-
+import json
 
 
 # Create your views here.
 
 
-
+BASE_DIR = Path(__file__).resolve().parent.parent
 def home(request):
     data = {}
     data = loadMenu(request)
+
     return render(request, 'webGym/index.html', data)
 
 
@@ -98,7 +103,19 @@ class MyCabinet(ListView):
     template_name = 'webGym/my.html'
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['menu'] = "kirill"
+        names = ("bob", "dan", "jack", "lizzy", "susan")
+
+        items = []
+        for i in range(10):
+            items.append({
+                "name": random.choice(names),
+                "age": random.randint(20, 80),
+                "url": "https://example.com",
+            })
+
+        context = {}
+        context["items"] = items
+        context["items_json"] = json.dumps(items)
         return context
     def get_queryset(self):
         return 1

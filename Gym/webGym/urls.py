@@ -5,7 +5,7 @@ from django.urls import path, include
 from django.contrib import admin
 from django.urls import path
 from .views import *
-
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
 
@@ -18,3 +18,5 @@ urlpatterns = [
     path('logout/', logout_user, name='logout'),
 
 ]
+
+

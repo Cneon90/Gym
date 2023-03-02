@@ -4,10 +4,10 @@ var popCanvas = document.getElementById("popChart");
 var barChart = new Chart(popCanvas, {
   type: 'bar',
   data: {
-    labels: ["China", "India", "United States", "Indonesia", "Brazil", "Pakistan", "Nigeria", "Bangladesh", "Russia", "Japan"],
+    labels: ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],
     datasets: [{
       label: 'Population',
-      data: [1379302771, 1281935911, 326625791, 260580739, 207353391, 204924861, 190632261, 157826578, 142257519, 126451398],
+      data: [500, 120, 95, 50, 300, 240, 170],
       backgroundColor: [
         'rgb(255, 99, 132)',
         'rgb(54, 162, 235)',
@@ -17,11 +17,11 @@ var barChart = new Chart(popCanvas, {
         'rgb(255, 159, 64)',
         'rgb(255, 99, 132)',
         'rgb(54, 162, 235)',
-        'rgb(255, 206, 86)',
-        'rgb(75, 192, 192)',
-        'rgb(153, 102, 255)'
       ]
     }]
   }
 });
+
+
 });
+

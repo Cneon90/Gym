@@ -133,12 +133,16 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_URL = '/static/'
-STATIC_ROOT = 'Gym/static/'
+STATIC_ROOT = 'Gym/static'
 
 STATICFILES_DIRS = [
-   os.path.join(BASE_DIR, "static"),
+   os.path.join(BASE_DIR, "static/"),
+   os.path.join(BASE_DIR, "../frontend/dist/"),
+   os.path.join(BASE_DIR, "frontend/vue"),
    ('node_modules', os.path.join(BASE_DIR, 'node_modules/')),
 ]
+
+
 
 
 
