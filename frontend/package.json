@@ -14,6 +14,7 @@
     "vue-dev": "npm run vue-watch-dev --prefix D:\\Programming\\Django\\GYM2.0\\Gym\\frontend\\"
   },
   "dependencies": {
+    "buefy": "^0.9.22",
     "core-js": "^3.8.3",
     "vue": "^2.6.14"
   },
