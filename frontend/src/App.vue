@@ -1,20 +1,37 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <TestDrive></TestDrive>
-  </div>
+
+<!--    <img alt="Vue logo" src="./assets/logo.png">-->
+<!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
+<!--    <TestDrive></TestDrive>-->
+ <section>
+
+
+   {{ message }}
+
+  <button @click="clickMe"> test  </button>
+ </section>
+
+
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import TestDrive from "@/components/TestDrive";
+
+
+
 
 export default {
   name: 'App',
   components: {
-    TestDrive,
-    HelloWorld
+
+  },
+    methods: {
+            clickMe() {
+               alert(2);
+            }
+        },
+ data() {
+    return { message: 4 }
   }
 }
 </script>
