@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.contrib import admin
 
+
 # Create your models here.
 class main_icon(models.Model):
     image_src = models.CharField(max_length=255, null=True)
@@ -32,6 +33,7 @@ class banner(models.Model):
     def __str__(self):
         return self.Titile
 
+
 class banner_button(models.Model):
     Slide = models.ForeignKey(banner, on_delete=models.CASCADE)
     url = models.CharField(max_length=255, null=True)
@@ -42,12 +44,7 @@ class banner_button(models.Model):
         return self.text
 
 
-
-
-
-
-
-#Добавляем в админку
+# Добавляем в админку
 
 admin.site.register(MainMenu)
 admin.site.register(banner)

@@ -1,3 +1,22 @@
+.status{
+    cursor: pointer;
+    border: 1px solid #299114;
+    border-radius: 5px;
+    margin: 10px;
+    width: 143px;
+    height: 70px;
+    text-align: center;
+
+}
+.status_star{
+    color: orangered;
+}
+.status_title{
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap');
 
 body {
@@ -708,7 +727,7 @@ p {
     .test-head:before {
         content: "";
         position: absolute;
-        background-image: url(../images/muscle.png);
+        background-image: url(../img/muscle.png);
         width: 80px;
         height: 80px;
         background-size: cover;
